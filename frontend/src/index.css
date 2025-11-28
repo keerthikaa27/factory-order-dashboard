@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background: #f6efe6; 
+  color: #3e2f24;     
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+
+.card {
+  @apply bg-[#fffaf5] rounded-xl shadow-sm p-5;
+}
+
+.card-muted {
+  @apply bg-[#f9f0e3] rounded-xl shadow-sm p-4;
+}
+
+.heading {
+  color: #6f4e37;
+  @apply font-semibold;
+}
+
+.subheading {
+  @apply text-xs uppercase tracking-wide text-slate-500;
+}
+
+.btn-primary {
+  background-color: #6f4e37;
+  color: #fff;
+  @apply px-5 py-2 rounded-lg text-sm font-medium hover:brightness-110 transition;
+}
+
+.btn-secondary {
+  border-color: #6f4e37;
+  color: #6f4e37;
+  @apply border px-5 py-2 rounded-lg text-sm font-medium hover:bg-[#f3e6da] transition;
+}
+
+.badge {
+  @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-green {
+  @apply badge bg-green-50 text-green-700;
+}
+
+.badge-amber {
+  @apply badge bg-amber-50 text-amber-700;
+}
+
+.input {
+  @apply border border-[#e0d3c2] rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-[#e0cdb5] bg-[#fffaf5];
+}
+
+.select {
+  @apply border border-[#e0d3c2] rounded-lg px-3 py-2 text-sm bg-[#fffaf5] focus:outline-none focus:ring focus:ring-[#e0cdb5];
+}
+
+.table-shell {
+  @apply overflow-x-auto rounded-xl border border-[#e0d3c2] bg-[#fffaf5];
+}
+
+.table-base {
+  @apply min-w-full text-sm;
+}
+
+.table-header {
+  @apply bg-[#f3e6da];
+}
+
+.table-header-cell {
+  @apply px-3 py-2 text-left font-semibold text-xs text-slate-600;
+}
+
+.table-cell {
+  @apply px-3 py-2 border-t border-[#f0e3d5];
+}
