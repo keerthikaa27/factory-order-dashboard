@@ -6,6 +6,10 @@ The frontend of the Factory Order Management Dashboard provides a clean, minimal
 
 The UI is designed to be lightweight, responsive, and aligned with a calm beige & brown professional theme for ease of long operational use.
 
+I’ve created a demo account you can use to log in:
+Email: user@gmail.com
+Password: user
+You can also create additional users via the /auth/register endpoint in the backend API docs.
 ---
 
 ## Tech Stack
@@ -90,6 +94,11 @@ The app will run at:
 * Typography optimized for readability
 
 ---
+## Screenshots
+
+![alt text](image.png)
+![alt text](image-1.png)
+
 
 ## Notes
 
