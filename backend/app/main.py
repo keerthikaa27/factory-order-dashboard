@@ -2,6 +2,8 @@ from app.api.v1.auth import router as auth_router
 from app.api.v1.analytics import router as analytics_router
 from app.api.v1.ingestion import router as ingestion_router
 from app.api.v1.orders import router as orders_router
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import HTTPException
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy import func
@@ -23,7 +25,10 @@ def create_app() -> FastAPI:
         description="Backend API for Factory Order Management Dashboard",
     )
 
-    origins = [origin.strip() for origin in settings.CORS_ALLOWED_ORIGINS.split(",")]
+    origins = [
+    "http://localhost:5173",                
+    "https://factorydashboard.netlify.app/",  
+    ]
 
     app.add_middleware(
         CORSMiddleware,
