@@ -10,6 +10,8 @@ from sqlalchemy import func
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
+from app.api.v1.debug import router as debug_router
+
 
 from app.core.config import settings
 from app.db.session import Base, engine
@@ -46,6 +48,8 @@ def create_app() -> FastAPI:
     app.include_router(orders_router)
     app.include_router(analytics_router)
     app.include_router(auth_router)
+    app.include_router(debug_router)
+
 
 
 
